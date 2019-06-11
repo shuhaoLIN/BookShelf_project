@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/book_image"
+        android:src="@drawable/book_image"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp" >
+
+        <TextView
+            android:id="@+id/book_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book"
+            android:textSize="21sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/book_editor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Robert C.Martin "
+            android:textSize="15sp"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:id="@+id/book_publishing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/book_editor"
+            android:text="清华大学出版社"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/book_editor" />
+
+
+        <TextView
+            android:id="@+id/book_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2009-03"
+            android:textSize="15sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

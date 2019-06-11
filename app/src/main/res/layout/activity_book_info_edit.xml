@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/book_edit_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimaryDark"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:text="Book Detail Edit"
+                    android:layout_gravity="left"/>
+
+                <TextView
+                    android:id="@+id/book_edit_toolbar_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="right"
+                    android:text="SAVE"
+                    android:textSize="18sp"
+                    android:textColor="#fff"/>
+            </LinearLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="16dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp">
+
+                    <ImageView
+                        android:id="@+id/book_cover_image_view"
+                        android:layout_width="90dp"
+                        android:layout_height="140dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/darker_gray"
+                        android:contentDescription="book_cover"
+                        android:cropToPadding="true" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginStart="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginLeft="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Title"
+                            android:labelFor="@+id/book_title_edit_text" />
+
+                        <EditText
+                            android:id="@id/book_title_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:hint="book_title_edit_text"
+                            android:inputType="text"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="-4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Author"
+                            android:labelFor="@+id/book_author_edit_text" />
+                        <!--Why set attr labelFor??-->
+
+                        <EditText
+                            android:id="@id/book_author_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:inputType="text"
+                            android:hint="book_author_edit_text"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/translator_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="-4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Translator"
+                            android:labelFor="@+id/book_translator_edit_text" />
+
+                        <EditText
+                            android:id="@id/book_translator_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:inputType="text"
+                            android:hint="book_translator_edit_text"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="-4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Publisher"
+                            android:labelFor="@+id/book_publisher_edit_text" />
+
+                        <EditText
+                            android:id="@id/book_publisher_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:inputType="text"
+                            android:hint="book_publisher_edit_text"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="-4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pubdate" />
+
+                        <EditText
+                            android:id="@+id/book_pubyear_edit_text"
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:layout_marginStart="8dp"
+                            android:inputType="number"
+                            android:hint="2000"
+                            android:layout_marginLeft="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-" />
+
+                        <EditText
+                            android:id="@+id/book_pubmonth_edit_text"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:inputType="number"
+                            android:hint="02" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="-4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ISBN"
+                            android:labelFor="@+id/book_isbn_edit_text" />
+
+                        <EditText
+                            android:id="@id/book_isbn_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:inputType="number"
+                            android:hint="66666666666666"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="16dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp">
+
+                <TextView
+                    android:id="@+id/book_edit_detail_bar_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DETAILS(SOURCE:DOUBAN.COM)" />
+                <!--May no this style-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp">
+
+                    <ImageView
+                        android:id="@+id/book_edit_readingstatus_image_view"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="center"
+                        android:contentDescription="Reading_status"
+                        app:srcCompat="@drawable/ic_reading_status_primary"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <!--style="@style/Widget.AppCompat.Spinner.Underlined"-->
+                    <!--android:backgroundTint="@color/colorSecondaryText"-->
+                    <Spinner
+                        android:id="@+id/reading_status_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:spinnerMode="dropdown"
+
+
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/book_edit_readingstatus_image_view"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/book_edit_readingstatus_image_view" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp">
+
+                    <ImageView
+                        android:id="@+id/book_edit_bookshelf_image_view"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="center"
+                        android:contentDescription="Book_shelf"
+                        app:srcCompat="@drawable/ic_bookshelf_primary"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp" />
+
+
+                    <Spinner
+                        android:id="@+id/book_shelf_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:spinnerMode="dropdown"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@id/book_edit_bookshelf_image_view"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@id/book_edit_bookshelf_image_view" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="20dp">
+
+                    <ImageView
+                        android:id="@+id/book_edit_note_image_view"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="center"
+                        android:contentDescription="Note_edit"
+                        app:srcCompat="@drawable/ic_notes_primary"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <EditText
+                        android:id="@+id/book_notes_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_marginStart="16dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:hint="note_edit_text"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@id/book_edit_note_image_view"
+                        android:layout_marginLeft="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@id/book_edit_note_image_view" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="20dp">
+
+                    <ImageView
+                        android:id="@+id/book_edit_label_image_view"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="center"
+                        android:contentDescription="Label"
+                        app:srcCompat="@drawable/ic_label_primary"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <EditText
+                        android:id="@+id/book_labels_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:layout_marginStart="16dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:hint="Add labels"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@id/book_edit_label_image_view"
+
+                        android:layout_marginLeft="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@id/book_edit_label_image_view" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="20dp">
+
+                    <ImageView
+                        android:id="@+id/book_edit_website_image_view"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="center"
+                        android:contentDescription="Website"
+                        app:srcCompat="@drawable/ic_website_primary"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <EditText
+                        android:id="@+id/book_website_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textSize="16sp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:hint="http://book.douban.com/subjects/2024655"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@id/book_edit_website_image_view"
+                        android:layout_marginLeft="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@id/book_edit_website_image_view" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

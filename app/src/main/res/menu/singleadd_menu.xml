@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- By shu hao, Main Page's title toolbar radio menu-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/flash"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_flash_on"
+        android:title=""/>
+
+    <item
+        android:id="@+id/bookisbn"
+        android:orderInCategory="200"
+        android:title="手动输入ISBN"
+        app:showAsAction="never"
+        >
+
+    </item>
+    <item
+        android:id="@+id/handbook"
+        android:orderInCategory="100"
+        android:title="手动输入书籍"
+        
+        app:showAsAction="never"
+        >
+
+    </item>
+</menu>

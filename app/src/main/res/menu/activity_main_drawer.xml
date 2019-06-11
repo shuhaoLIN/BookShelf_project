@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/g1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/all_books"
+            android:icon="@drawable/books_icon"
+            android:title="书籍"/>
+        <item
+            android:id="@+id/search"
+            android:icon="@drawable/search_icon"
+            android:title="搜索"
+            app:showAsAction="always"
+            app:actionViewClass="android.support.v7.widget.SearchView" />
+    </group>
+
+
+
+    <group
+        android:id="@+id/g3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/setting_icon"
+            android:title="设置"/>
+        <item
+            android:id="@+id/about_app"
+            android:icon="@drawable/about_icon"
+            android:title="关于"/>
+
+    </group>
+
+    <group
+        android:id="@+id/g2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/add_label"
+            android:icon="@drawable/ic_shortcut_add"
+            android:title="创建新标签"/>
+    </group>
+</menu>

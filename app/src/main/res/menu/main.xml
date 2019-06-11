@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- By shu hao, Main Page's title toolbar radio menu-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/search_books"
+          android:title="搜索"
+          android:icon="@drawable/search_books_icon"
+          app:showAsAction="always"
+          app:actionViewClass="android.support.v7.widget.SearchView"
+    />
+    <item android:id="@+id/sorting_books"
+          app:showAsAction="always"
+          android:icon="@drawable/sorting_icon"
+          android:title="排序"/>
+    <item android:id="@+id/edit_label"
+        app:showAsAction="always"
+        android:icon="@drawable/header_label_op"
+        android:title="排序"/>
+
+</menu>
